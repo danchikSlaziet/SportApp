@@ -1,0 +1,7 @@
+.header {
+    width: calc(100% - 32px);
+    position: fixed;
+    top: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+}

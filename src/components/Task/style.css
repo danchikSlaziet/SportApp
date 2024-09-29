@@ -1,0 +1,280 @@
+.task{
+    /* min-height: 100dvh; */
+    padding: 0 17px;
+    font-family: "5ka Sans Design";
+    /* overflow: hidden !important; */
+    /* height: 100%; */
+}
+.task__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../public/assets/images/static/main-bg.svg);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+.task__content {
+    opacity: 0;
+    position: relative;
+    z-index: 10;
+    transition: opacity .5s linear;
+    margin-bottom: 90px;
+}
+.task_active .task__content {
+    opacity: 1;
+}
+
+.task__title {
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28.87px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+    margin-bottom: 7px;
+    margin-top: 22px;
+}
+.task-info {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+}
+.task__friends {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 9px 13px;
+    border-radius: 288px;
+}
+.task__friends-img {
+    width: 20px;
+}
+.task__friends-text {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.65px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: left;
+}
+.task__pen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    width: fit-content;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 9px 13px;
+    border-radius: 288px;
+    /* backdrop-filter: blur(13.899999618530273px); */
+    /* -webkit-backdrop-filter: blur(13.899999618530273px); */
+}
+.task__pen-img {
+    width: 20px;
+}
+.task__pen-text {
+    color: #FFF;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 21.65px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: left;
+}
+.task__taska:not(:last-of-type) {
+    margin-bottom: 12px;
+}
+.taska {
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 15px 22px 16px 17px;
+    background-color: 
+    rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    /* backdrop-filter: blur(13.899999618530273px); */
+    /* -webkit-backdrop-filter: blur(13.899999618530273px); */
+}
+.taska:hover {
+    cursor: pointer;
+}
+.taska__people-img {
+    margin-right: 14px;
+}
+.taska__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+}
+.taska__info-text {
+    color: #FFF;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16.84px;
+    letter-spacing: -0.35652172565460205px;
+    text-align: left;
+}
+.taska__info-pen {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    padding: 1px 6px;
+    width: fit-content;
+    background-color: #FFF;
+    border-radius: 29px;
+}
+.taska__info-pen-count {
+    color: rgba(0, 146, 58, 1);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.25px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: left;
+}
+.taska__arrow {
+    margin-left: auto;
+    width: 30px;
+}
+.task__friend-popup {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: opacity .3s linear;
+}
+.task__friend-popup_active {
+    opacity: 1;
+    pointer-events: all;
+}
+.task__friend-content {
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 16px);
+    border-radius: 18px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    padding: 35px 17px 34px 18px;
+}
+.task__friend-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+.task__friend-close:hover {
+    cursor: pointer;
+}
+.task__friend-img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+.task__friend-title {
+    color: #000;
+    margin-bottom: 20px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28.87px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+}
+.task__friend-subtitle {
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.25px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+}
+.task__friend-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+}
+.task__friend-invite-btn {
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    padding: 24px 7px;
+    background-color: rgba(229, 35, 34, 1);
+    border-radius: 148px;
+    color: #FFF;
+    font-family: "5ka Sans Design";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.25px;
+    letter-spacing: -0.35652172565460205px;
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+.task__friend-link {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.task__friend-invite-btn:hover {
+    cursor: pointer;
+}
+.task__friend-copy-btn {
+    padding: 22px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-color: 
+    rgba(229, 35, 34, 0.2);
+}
+.task__friend-copy-btn:hover {
+    cursor: pointer;
+}
+.task__friend-copy-img {
+    display: block;
+}
+
+.task__top-popup {
+    z-index: 102;
+    width: calc(100% - 40px);
+    position: fixed;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, -200%);
+    transition: transform .24s ease-in;
+    background-color: #FFF;
+    border-radius: 38px;
+    box-sizing: border-box;
+    padding: 10px;
+    color: #000;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.84px;
+    letter-spacing: -0.35652172565460205px;
+    text-align: center;
+}
+.task__top-popup_active {
+    transform: translate(-50%, 0);
+}

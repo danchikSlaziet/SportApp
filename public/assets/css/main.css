@@ -1,0 +1,178 @@
+@font-face{
+    font-family: "5ka Sans Design";
+    src: url("../fonts/5kaSansDesign-Black.woff") format('woff'), url("../fonts/5kaSansDesign-Black.ttf") format('ttf');
+    font-weight: 900;
+    font-style:normal;
+    font-display:swap;
+}
+@font-face{
+    font-family: "5ka Sans Design";
+    src: url("../fonts/5kaSansDesign-Light.woff") format('woff'), url("../fonts/5kaSansDesign-Light.ttf") format('ttf');
+    font-weight: 300;
+    font-style:normal;
+    font-display:swap;
+}
+@font-face{
+    font-family: "5ka Sans Design";
+    src: url("../fonts/5kaSansDesign-Regular.woff") format('woff'), url("../fonts/5kaSansDesign-Regular.ttf") format('ttf');
+    font-weight: 400;
+    font-style:normal;
+    font-display:swap;
+}
+@font-face{
+    font-family: "5ka Sans Design";
+    src: url("../fonts/5kaSansDesign-SemiBold.woff") format('woff'), url("../fonts/5kaSansDesign-SemiBold.ttf") format('ttf');
+    font-weight: 600;
+    font-style:normal;
+    font-display:swap;
+}
+@font-face{
+    font-family: "5ka Sans Design";
+    src: url("../fonts/5kaSansDesign-Ultra.woff") format('woff'), url("../fonts/5kaSansDesign-Ultra.ttf") format('ttf');
+    font-weight: 950;
+    font-style:normal;
+    font-display:swap;
+}
+:root{
+    --black: #000;
+    --white: #FFFFFF;
+    --red: #ED1C24;
+    --grey: #F1F1F0;
+}
+#root {
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+*{
+    outline: none !important;
+}
+
+ul,
+ol,
+p,
+div,
+label,
+h1,h2,h3{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+button, button span{
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+div {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+img{
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    user-select: none;
+}
+
+a,a:hover{
+    text-decoration: none;
+}
+
+body,html{
+    font-family: '5ka Sans Design', sans-serif;
+    /* min-height: 100vh; */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* overflow-x: hidden; */
+    /* background-color: rgba(0, 146, 58, 1); */
+    background: linear-gradient(179.95deg, #00923A 49.92%, #00712D 99.96%);
+}
+body {
+    height: 100vh !important;
+    overflow: hidden;
+    /* max-height: 100vh !important; */
+}
+#root {
+    /* overflow-x: hidden;
+    overflow-y: auto; */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+.music-icon:hover {
+    cursor: pointer;
+}
+.ios-help-bg {
+    position: fixed;
+    background: linear-gradient(179.95deg, #00923A 49.92%, #00712D 99.96%);
+    top: -400px;
+    left: 0;
+    right: 0;
+    bottom: -400px;
+    z-index: 0;
+}
+.not-ios-help {
+    display: none;
+}
+
+.overlay{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(120.4% 55.6% at 131.33% 55.17%, #581B7A 0%, #290038 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: visibility .3s, opacity .3s linear;
+    display: none;
+}
+
+.overlay_active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal{
+    width: 375px;
+    /* min-height: 420px; */
+    background-color: #fff;
+    border-radius: 20px;
+    box-sizing: border-box;
+    padding: 40px 32px 36px;
+    position: relative;
+}
+
+.modal__close{
+    display: flex;
+    width: 24px;
+    height: 24px;
+    background-color: var(--grey);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.container{
+    /* min-height: 100vh;
+    overflow: auto;
+    position: relative; */
+}

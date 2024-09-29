@@ -1,0 +1,266 @@
+.rebus{
+    /* min-height: 100dvh; */
+    /* height: 100%; */
+    padding: 0 17px;
+    font-family: "5ka Sans Design";
+}
+.rebus__bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../../../public/assets/images/static/main-bg.svg);
+    background-size: 100%;
+    background-repeat: repeat-y;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+.rebus__content {
+    opacity: 0;
+    position: relative;
+    z-index: 10;
+    transition: opacity .5s linear;
+    /* margin-bottom: 75px; */
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.rebus_active .rebus__content {
+    opacity: 1;
+}
+.rebus__back {
+    position: absolute;
+    top: 22px;
+    left: 0px;
+    width: 30px;
+}
+.rebus__back:hover {
+    cursor: pointer;
+}
+.rebus__title {
+    padding-top: 37px;
+    margin-bottom: 26px;
+    color: #FFF;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28.87px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+}
+.rebus__subtitle {
+    color: rgba(255, 255, 255, .6);
+    margin: 0 auto;
+    margin-bottom: 21px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.25px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+    /* max-width: 250px; */
+}
+.rebus__link {
+    border-radius: 148px;
+    /* backdrop-filter: blur(13.899999618530273px);
+    -webkit-backdrop-filter: blur(13.899999618530273px); */
+    box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.1);
+    padding: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+.rebus__link:hover {
+    cursor: pointer;
+}
+.rebus__link-text {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.25px;
+    letter-spacing: -0.35652172565460205px;
+    text-align: left;
+}
+.rebus__link-href {
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.rebus__link-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 18px;
+    width: 30px;
+}
+.rebus__input-block {
+    width: calc(100% + 34px);
+    margin-left: -17px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    border-radius: 18px;
+    padding: 23px 17px 84px 17px;
+    margin-top: auto;
+    opacity: 1;
+    pointer-events: all;
+    transition: opacity .24s linear;
+    transition: transform .24s ease;
+}
+.rebus__input-block_disable {
+    opacity: 0;
+    pointer-events: none;
+}
+.rebus__input-title {
+    color: #000;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28.87px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+    margin-bottom: 21px;
+}
+.rebus__input {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    outline: none;
+    border: none;
+    background-color: #FFF;
+    border: 1px solid rgba(231, 231, 231, 1);
+    border-radius: 12px;
+    color: #000;
+    font-family: "5ka Sans Design";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.25px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+    padding: 25px 10px;
+    margin-bottom: 25px;
+}
+.rebus__input::placeholder {
+    color: rgba(178, 178, 178, 1);
+    font-family: "5ka Sans Design";
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.25px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+}
+.rebus__input-button {
+    display: block;
+    outline: none;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 25px 10px;
+    border-radius: 148px;
+    background-color: rgba(229, 35, 34, 1);
+    color: #FFF;
+    font-family: "5ka Sans Design";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.25px;
+    letter-spacing: -0.35652172565460205px;
+    text-align: center;
+    pointer-events: none;
+    opacity: .3;
+    transition: opacity .24s linear;
+}
+.rebus__input-button_active {
+    pointer-events: all;
+    opacity: 1;
+}
+.rebus__reject-popup {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: opacity .3s linear;
+}
+.rebus__reject-popup_active {
+    opacity: 1;
+    pointer-events: all;
+}
+.rebus__submit-popup {
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    top: 0;
+    z-index: 101;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.35);
+    transition: opacity .3s linear;
+}
+.rebus__submit-popup_active {
+    opacity: 1;
+    pointer-events: all;
+}
+.rebus__submit-content {
+    position: absolute;
+    bottom: 11px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: calc(100% - 16px);
+    border-radius: 18px;
+    background-color: #FFF;
+    box-sizing: border-box;
+    padding: 28px 17px 21px 22px;
+}
+.rebus__submit-close {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+}
+.rebus__submit-close:hover {
+    cursor: pointer;
+}
+.rebus__submit-title {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28.87px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+}
+.rebus__submit-subtitle {
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 19.25px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+}
+.rebus__submit-btn {
+    color: #FFF;
+    font-family: "5ka Sans Design";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.25px;
+    letter-spacing: -0.35652172565460205px;
+    text-align: center;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    padding: 24px 10px;
+    border-radius: 148px;
+    background-color: rgba(229, 35, 34, 1);
+    width: 100%;
+}
+

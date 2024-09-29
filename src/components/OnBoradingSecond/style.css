@@ -1,0 +1,127 @@
+.onboarding2{
+    opacity: 0;
+    transition: opacity .5s linear;
+    position: relative;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    /* padding: 0 12px; */
+    overflow: hidden !important;
+    height: 100vh;
+}
+.onboarding2_active {
+    opacity: 1;
+}
+.onboarding2__topBG {
+    position: absolute;
+    width: 100%;
+    height: 172px;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    mix-blend-mode: multiply;
+    object-fit: cover;
+    pointer-events: none;
+}
+.onboarding2__main-img {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 360px;
+    z-index: 20;
+    pointer-events: none;
+}
+@media screen and (max-height: 755px) {
+    .onboarding2__main-img {
+        top: 80px;
+    }
+}
+@media screen and (max-height: 680px) {
+    .onboarding2__main-img {
+        top: 20px;
+    }
+}
+@media screen and (max-height: 615px) {
+    .onboarding2__main-img {
+        top: -16px;
+    }
+}
+@media screen and (max-height: 565px) {
+    .onboarding2__main-img {
+        top: -30px;
+    }
+}
+.onboarding2__bottomBG {
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    bottom: 0;
+    height: 430px;
+    background: linear-gradient(180deg, rgba(1, 126, 50, 0) 0%, #017E32 100%);
+    z-index: 20;
+    pointer-events: none;
+}
+.onboarding2__paws {
+    pointer-events: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 227px;
+    mix-blend-mode: multiply;
+    pointer-events: none;
+}
+.onboarding2__info-wrapper {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 29px;
+    z-index: 30;
+}
+.onboarding2__title {
+    color: #FFF;
+    margin-bottom: 10px;
+    font-family: "5ka Sans Design";
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 28.87px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+}
+.onboarding2__subtitle {
+    width: calc(100% - 36px);
+    margin: 0 auto;
+    margin-bottom: 31px;
+    color: #FFF;
+    font-family: "5ka Sans Design";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.84px;
+    letter-spacing: -0.30000001192092896px;
+    text-align: center;
+    max-width: 319px;
+}
+.onboarding2__button {
+    display: block;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    width: calc(100% - 36px);
+    margin: 0 auto;
+    padding: 24px 7px;
+    background-color: rgba(229, 35, 34, 1);
+    border-radius: 148px;
+    color: #FFF;
+    font-family: "5ka Sans Design";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 19.25px;
+    letter-spacing: -0.35652172565460205px;
+    text-align: center;
+    transition: transform .24s ease-in-out;
+}
+.onboarding2__button:hover {
+    cursor: pointer;
+    transform: translateY(-3px);
+}
